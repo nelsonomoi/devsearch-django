@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+<h1>{{ project.title }}</h1>
+<span><small> created on : {{ project.created }}</small></span>
+<hr>
+
+    {% for tag in tags %}
+        <span style="border:1px solid grey;">{{ tag.name }}</span>
+    {% endfor%}
+<hr>
+
+<img src="{{ project.featured_image.url }}"/>
+
+<p>{{ project.description }}</p>
+
+{% endblock %}
